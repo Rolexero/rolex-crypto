@@ -44,7 +44,7 @@ const Carousel = () => {
             </span>
           </span>
 
-          <span className="text-lg font-bold ml-10">  
+          <span className="text-lg font-bold ml-10 sm:ml-0">  
             {currentData.symbol} {numberWithCommas(coin?.current_price.toFixed(2))}
           </span>
         </Link>
@@ -53,7 +53,7 @@ const Carousel = () => {
   }
 
   return (
-    <div className="container  mx-auto pb-20 flex mr-5 h-50">
+    <div className="container  mx-auto pb-20 flex mr-5 h-50 -mt-20">
       <AliceCarousel
         mouseTracking
         infinite

@@ -15,6 +15,10 @@ module.exports = {
             backgroundImage: {
                 bannerImg: "url('/src/img/banner2.jpg')",
             },
+            colors: {
+                brightDark: "#14161a",
+                colorGold: "#EEBC1E",
+            },
         },
     },
     plugins: [require("flowbite/plugin")],
