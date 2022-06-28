@@ -13,7 +13,7 @@ const CoinsTable = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
-  const [elemPerPage, setElemPerPage] = useState(10);
+  const [elemPerPage ] = useState(10);
   const { statusValue, coinList, currentData } = useGlobalContext();
   
 

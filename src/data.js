@@ -1,11 +1,11 @@
 export default [{
         id: 1,
-        name: "USD",
-        symbol: "$",
+        name: "NGN",
+        symbol: " ₦",
     },
     {
         id: 2,
-        name: "NGN",
-        symbol: "₦",
+        name: "USD",
+        symbol: "$",
     },
 ];

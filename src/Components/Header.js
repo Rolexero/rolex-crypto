@@ -11,7 +11,6 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-
 const Header = () => {
 const {currencyInfo, currentData, setCurrency, data} = useGlobalContext();
   return (
