@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { HistoricalChart } from "../Config/api";
 import { useQuery } from "react-query";
 import { useGlobalContext } from "../Context/CryptoContext";
-import { CircularProgress, LinearProgress } from '@mui/material';
+import { LinearProgress } from '@mui/material';
 import { Line } from "react-chartjs-2";
 import {chartDays} from '../Config/data'
 import {
