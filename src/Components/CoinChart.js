@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { HistoricalChart } from "../Config/api";
 import { useQuery } from "react-query";
 import { useGlobalContext } from "../Context/CryptoContext";
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, LinearProgress } from '@mui/material';
 import { Line } from "react-chartjs-2";
 import {chartDays} from '../Config/data'
 import {
@@ -44,10 +44,9 @@ const CoinChart = ({id}) => {
     >
       {/* Chart */}
       {status === "loading" ? (
-        <CircularProgress
+        <LinearProgress
           style={{ backgroundColor: "gold" }}
-          thickness={1}
-          size={200}
+          className="container mx-auto"
         />
       ) : (
         <div className="p-42 mt-2 w-full">
@@ -75,9 +74,19 @@ const CoinChart = ({id}) => {
       )}
 
       {/* Buttons */}
-      <div className='grid grid-cols-2 md:grid-cols-4'>
+      <div className="grid grid-cols-2 md:grid-cols-4">
         {chartDays.map((data) => {
-          return <button className={`border-2 border-green-500 p-2 m-2 ${days === data.value ? 'text-black bg-green-500' : 'text-white'} hover:bg-green-500`} key={data.value} onClick={()=>setDays(data.value)}>{data.label}</button>;
+          return (
+            <button
+              className={`border-2 border-green-500 p-2 m-2 ${
+                days === data.value ? "text-black bg-green-500" : "text-white"
+              } hover:bg-green-500`}
+              key={data.value}
+              onClick={() => setDays(data.value)}
+            >
+              {data.label}
+            </button>
+          );
         })}
       </div>
     </div>
